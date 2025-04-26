@@ -64,7 +64,9 @@
             }
         }
 
-        ellenorzoGomb.addEventListener("click", function () {
+        ellenorzoGomb.addEventListener("click", EmailEllenorzo);
+
+        function EmailEllenorzo() {
             let hibaSzoveg = "";
             let vanHiba = false;
             const email = emailInput.value;
@@ -110,7 +112,7 @@
                 hibaUzenetDoboz.style.display = "block";
 
             }
-        });
+        };
     </script>
 </body>
 
