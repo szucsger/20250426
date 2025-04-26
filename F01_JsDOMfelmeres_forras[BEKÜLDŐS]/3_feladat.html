@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. feladat</title>
+    <style>
+        img {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input type="button" name="" id="kepElrejt" value="elrejt">
+    </form>
+    <img src="hidingCat.jpg" alt="Hiding Cat" title="Hiding Cat" id="macskaKep">
+
+    <script>
+        let elhalvanyitoGomb = document.getElementById("kepElrejt");
+        let macskaKep = document.getElementById("macskaKep");
+        let lathato = true;
+        elhalvanyitoGomb.addEventListener("click", MacskaElrejt);
+
+        function MacskaElrejt() {
+            if (lathato) {
+                macskaKep.style.opacity = 0;
+                lathato = false;
+                elhalvanyitoGomb.value = "felfed"
+            } else {
+                macskaKep.style.opacity = 1;
+                lathato = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. feladat</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <h3>1. feladat</h3>
+        <input type="text" name="" id="szovegMezo">
+        <p id="karakterszam">Karakterszám: 0</p>
+    </form>
+
+    <script>
+        let szovegMezo = document.getElementById("szovegMezo");
+
+        szovegMezo.addEventListener("input", KarakterSzamlalo);
+
+        function KarakterSzamlalo() {
+            let szovegMezoElem = document.getElementById("szovegMezo");
+            let karakterSzamElem = document.getElementById("karakterszam");
+            karakterSzamElem.textContent = "Karakterszám: " + szovegMezoElem.value.length;
+        }
+    </script>
+</body>
+
+</html>
